@@ -25,7 +25,7 @@ namespace EmailSender.Controllers
                 message.To.Add(new MailboxAddress("", email.AddressTo));
                 message.Subject = email.Subject;
 
-                message.Body = new TextPart(MimeKit.Text.TextFormat.Text)
+                message.Body = new TextPart(MimeKit.Text.TextFormat.Html)
                 {
                     Text = email.Body
                 };
